@@ -23,7 +23,7 @@ ip = socket.gethostbyname(hostname)
 def server_list():
     # Set up the server socket
     server = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-    server_address = (ip, 4000)
+    server_address = (192.168.1.219, 4000)
     server.bind(server_address)
     server.listen(5)
     print(f"Connect to ip: {ip}")
