@@ -9,7 +9,7 @@ root.geometry('320x175')
 def inp(bt):
     try:
         client = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-        server_address = ('192.168.1.214', 5200)
+        server_address = ('192.168.1.143', 5200)
         client.connect(server_address)
         message = bt
         client.sendall(message.encode('utf-8'))
@@ -17,13 +17,12 @@ def inp(bt):
     except Exception as e:
         print("Error:", e)
 
-hostname = socket.gethostname()
-ip = socket.gethostbyname(hostname)
+ip = '192.168.1.219'
 
 def server_list():
     # Set up the server socket
     server = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-    server_address = (192.168.1.219, 4000)
+    server_address = (ip, 4000)
     server.bind(server_address)
     server.listen(5)
     print(f"Connect to ip: {ip}")
