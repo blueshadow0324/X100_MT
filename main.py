@@ -9,7 +9,7 @@ root.geometry('320x175')
 def inp(bt):
     try:
         client = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-        server_address = ('192.168.1.143', 5200)
+        server_address = ('192.168.1.214', 5200)
         client.connect(server_address)
         message = bt
         client.sendall(message.encode('utf-8'))
